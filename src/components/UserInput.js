@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const UserInput = () => {
+  const [userInput, setUserInput] = useState();
+
   const handelFormSubmit = (event) => {
     event.preventDefault();
     console.log("handelFormSubmit");
