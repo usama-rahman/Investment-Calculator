@@ -1,7 +1,12 @@
 import { useState } from "react";
 
 const UserInput = () => {
-  const [userInput, setUserInput] = useState();
+  const [userInput, setUserInput] = useState({
+    "current-savings": 10000,
+    "yearly-contribution": 3000,
+    "expected-return": 7,
+    duration: 5,
+  });
 
   const handelFormSubmit = (event) => {
     event.preventDefault();
@@ -12,6 +17,7 @@ const UserInput = () => {
     event.preventDefault();
     console.log("handelReset");
   };
+  
 
   const inputChangeHandeler = (input, value) => {
     console.log(input, value);
