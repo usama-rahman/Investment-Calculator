@@ -12,7 +12,7 @@ const UserInput = (props) => {
 
   const handelFormSubmit = (event) => {
     event.preventDefault();
-    props.onCalculate(userInput);
+    // props.onCalculate(userInput);
   };
 
   const handelReset = (event) => {
@@ -31,6 +31,7 @@ const UserInput = (props) => {
             onChange={(e) =>
               inputChangeHandeler("current-savings", e.target.value)
             }
+            value={userInput["current-savings"]}
             type="number"
             id="current-savings"
           />
@@ -38,6 +39,7 @@ const UserInput = (props) => {
         <p>
           <label htmlFor="yearly-contribution">Yearly Savings ($)</label>
           <input
+            value={userInput["yearly-contribution"]}
             onChange={(e) =>
               inputChangeHandeler("yearly-contribution", e.target.value)
             }
@@ -55,6 +57,7 @@ const UserInput = (props) => {
             onChange={(e) =>
               inputChangeHandeler("expected-return", e.target.value)
             }
+            value={userInput["expected-return"]}
             type="number"
             id="expected-return"
           />
@@ -64,6 +67,7 @@ const UserInput = (props) => {
           <input
             onChange={(e) => inputChangeHandeler("duration", e.target.value)}
             type="number"
+            // value={userInput.duration}
             id="duration"
           />
         </p>

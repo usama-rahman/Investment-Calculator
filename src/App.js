@@ -35,7 +35,8 @@ function App() {
       <Header />
       <UserInput onCalculate={calculateHandler} />
 
-      <ResultsTable />
+      {!userInput && <p> No result Founds </p>}
+      {userInput && <ResultsTable />}
     </div>
   );
 }
