@@ -74,7 +74,7 @@ const UserInput = (props) => {
           <input
             onChange={(e) => inputChangeHandeler("duration", e.target.value)}
             type="number"
-            // value={userInput.duration}
+            value={userInput.duration}
             id="duration"
           />
         </p>
