@@ -29,14 +29,23 @@ function App() {
       });
     }
   }
+  console.log(yearlyData);
 
   return (
     <div>
       <Header />
       <UserInput onCalculate={calculateHandler} />
 
-      {!userInput && <p> No result Founds </p>}
-      {userInput && <ResultsTable />}
+      {/* {!userInput && <p> No result Founds </p>}
+      {userInput && <ResultsTable />} */}
+
+      {/* {!userInput ? (
+        <ResultsTable data={yearlyData} />
+      ) : (
+        <p> No result Founds </p>
+      )} */}
+
+      <ResultsTable data={yearlyData} />
     </div>
   );
 }
