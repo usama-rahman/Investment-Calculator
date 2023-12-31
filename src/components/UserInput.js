@@ -20,7 +20,14 @@ const UserInput = (props) => {
     setUserInput(initialUserInput);
   };
 
-  const inputChangeHandeler = (input, value) => {};
+  const inputChangeHandeler = (input, value) => {
+    setUserInput((prevInput) => {
+      return {
+        ...prevInput,
+        [input]: +value,
+      };
+    });
+  };
 
   return (
     <form onSubmit={handelFormSubmit} className="form">

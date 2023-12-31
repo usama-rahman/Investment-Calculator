@@ -1,4 +1,4 @@
-const ResultsTable = ({ props }) => {
+const ResultsTable = (props) => {
   return (
     <table className="result">
       <thead>

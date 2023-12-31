@@ -29,7 +29,6 @@ function App() {
       });
     }
   }
-  console.log(yearlyData);
 
   return (
     <div>
@@ -39,13 +38,14 @@ function App() {
       {/* {!userInput && <p> No result Founds </p>}
       {userInput && <ResultsTable />} */}
 
-      {/* {!userInput ? (
+      {!userInput ? (
         <ResultsTable data={yearlyData} />
       ) : (
         <p> No result Founds </p>
-      )} */}
+      )}
 
-      <ResultsTable data={yearlyData} />
+      {/* <ResultsTable data={yearlyData} /> */}
+      {/* <ResultsTable /> */}
     </div>
   );
 }
